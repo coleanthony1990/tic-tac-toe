@@ -1,0 +1,44 @@
+#page-container {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    /* align-items: stretch; */
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+#left-box {
+    display: flex;
+    background-color: lemonchiffon;
+    padding: 150px;
+    margin: 0px;
+    align-items: stretch;
+    flex-direction: column;
+}
+#right-box {
+    display: flex;
+    background-color: lemonchiffon;
+    padding: 150px;
+    margin: 0px;
+    align-items: stretch;
+    flex-direction: column;
+}
+#game-box {
+    display: flex;
+    background-color: lightcyan;
+    padding: 300px;
+    margin: 0px;
+    align-items: stretch;
+    flex-direction: column;
+    text-align: flex-start
+}
+.grid {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-section {
+    width: 15px;
+    height: auto;
+}
+#
