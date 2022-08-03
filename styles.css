@@ -1,0 +1,82 @@
+html, body , .container {
+    height: 100%;
+    margin: 0;
+  }
+
+
+#page-container {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    /* align-items: stretch; */
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+#left-box {
+    display: flex;
+    background-color: lemonchiffon;
+    padding: 145px;
+    margin: 0px;
+    align-items: stretch;
+    flex-direction: column;
+    width: 15vw;
+}
+#right-box {
+    display: flex;
+    background-color: lemonchiffon;
+    padding: 145px;
+    margin: 0px;
+    align-items: stretch;
+    flex-direction: column;
+    width: 15vw;
+
+}
+#game-box {
+    display: flex;
+    background-color: lightcyan;
+    width: 40vw;
+    padding: 200px;
+    margin: 0px;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid black;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 290px;
+    width: 290px;
+    margin-top: 60px;
+    align-items: center;
+}
+.grid-section {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    border: 4px solid black;
+    height: 90px;
+    width: 90px;
+    row-gap: none;;
+}
+#section-1, #section-2, #section-3 {
+    border-top: none;
+    margin-bottom: 0px;
+    border-bottom: none;
+}
+#section-1, #section-4, #section-7 {
+    border-left: none;
+}
+#section-7, #section-8, #section-9 {
+    border-bottom: none;
+}
+#section-3, #section-6, #section-9 {
+    border-right: none;
+    margin-bottom: none;
+}
+#section-4, #section-5, #section-6 {
+    margin-top: 0px;
+    border-bottom: none;
+}
