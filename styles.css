@@ -23,6 +23,13 @@ html, body , .container {
     align-items: stretch;
     flex-direction: column;
     width: 15vw;
+    
+}
+#player-1 {
+    font-size: 100px;
+}
+#player-2 {
+    font-size: 100px;
 }
 #right-box {
     display: flex;
