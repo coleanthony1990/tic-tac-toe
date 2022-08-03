@@ -37,34 +37,31 @@ html, body , .container {
 #game-box {
     display: flex;
     background-color: lightcyan;
-    width: 40vw;
-    padding: 200px;
-    margin: 0px;
+    width: 60vw;
+    padding: 20px;
     align-items: center;
     flex-direction: column;
     border: 5px solid black;
 }
 .grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto;
     height: 290px;
     width: 290px;
-    margin-top: 60px;
-    align-items: center;
+    margin-top: 100px;
+    margin-left: -40px;
 }
 .grid-section {
     display: flex;
-    justify-content: center;
-    align-content: flex-start;
-    border: 4px solid black;
-    height: 90px;
-    width: 90px;
-    row-gap: none;;
+    border: 1px solid black;
+    height: 110px;
+    width: 110px;
+    row-gap: none;
 }
 #section-1, #section-2, #section-3 {
     border-top: none;
     margin-bottom: 0px;
-    border-bottom: none;
+    
 }
 #section-1, #section-4, #section-7 {
     border-left: none;
@@ -74,9 +71,8 @@ html, body , .container {
 }
 #section-3, #section-6, #section-9 {
     border-right: none;
-    margin-bottom: none;
 }
 #section-4, #section-5, #section-6 {
     margin-top: 0px;
-    border-bottom: none;
+    
 }
