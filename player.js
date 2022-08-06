@@ -6,9 +6,6 @@ class Player {
         this.turn = false;
     }
     increaseWins() {
-        for (var i = 0; i < game.winningMoves.length; i++) {
-            if //(moves include(game.winningMoves[i]) this.wins++ )
-        }
-        
+        this.wins++
     }
 }
