@@ -1,33 +1,28 @@
-class game {
+class Game {
     constructor() {
         this.win = false;
         this.draw = false;
         this.player1 = new Player({id: 1, token: 🚴})
-        this.player2 = new Player({id: 1, token: 🍍})
-        this.turnEven = true;
-        this.turnOdd = false;
+        this.player2 = new Player({id: 2, token: 🍍})
+        this.moves = ['', '', '', '', '', '', '', '', '']
         this.winningMoves = [
-            [section-1, section-2, section-3],
-            [section-1, section-5, section-9],
-            [section-1, section-4, section-7],
-            [section-2, section-5, section-8],
-            [section-3, section-5, section-7],
-            [section-3, section-6, section-9],
-            [section-4, section-5, section-6],
-            [section-7, section-8, section-9]
+            [1, 2, 3],
+            [1, 5, 9],
+            [1, 4, 7],
+            [2, 5, 8],
+            [3, 5, 7],
+            [3, 6, 9],
+            [4, 5, 6],
+            [7, 8, 9]
         ];
             
         }
-        determineTurn() {
-            if (this.turnEven) {
-                this.turnOdd
-            }
-        }
+     
     }
 
 
 /*this game file should 
-have Two Player instances
+have Two Player instances- done
 A way to keep track of the data for the game board
 A way to keep track of which player’s turn it currently is
 A way to check the Game’s board data for win conditions
