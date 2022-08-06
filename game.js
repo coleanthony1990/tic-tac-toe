@@ -23,20 +23,50 @@ class Game {
             } else {
                 this.currentPlayer = this.player1
             }
-            
+            var turnTitle = document.getElementById('turn')
+            turnTitle.innerHTML = `It's ${this.currentPlayer.token} turn`
+
+             
         }
-        checkWinOrDraw() {
-            if (this.player1.token === this.winningMoves) {
-                return `{this.player1.token} Wins!`
-            } else if (this.player2.token === this.winningMoves) {
-                return `{this.player1.token} Wins!`
-            } else {
-                return 'Draw!'
+        checkWin() {
+            for (var i = 0; i < this.winningMoves.length; i++) {
+               var squares = this.winningMoves[i]
+               if (document.getElementById('section-'+ squares[0]).innerHTML === this.player1.token && document.getElementById('section-'+ squares[1]).innerHTML === this.player1.token && document.getElementById('section-'+ squares[2]).innerHTML === this.player1.token) {
+                this.player1.increaseWins()
+                this.win = true;
+               } else if (document.getElementById('section-'+ squares[0]).innerHTML === this.player2.token && document.getElementById('section-'+ squares[1]).innerHTML === this.player2.token && document.getElementById('section-'+ squares[2]).innerHTML === this.player2.token) {
+                this.player2.increaseWins()
+                this.win = true;
+               }
+               }
+               }
+        reset() {
+            var grid = document.querySelectorAll('.grid-section')
+            for (var i = 0; i < grid.length; i++) {
+                grid[i].innerHTML = ''
             }
+                
+
+        }       
+
+            //     if (squares[0] == this.player1.token && 
+            //     squares[1] == this.player1.token && 
+            //     squares[2] == this.player1.token) {
+            //         this.player1.increaseWins()
+            //         return
+            //     }
+            //     if (squares[0] this.player2.token && 
+            //         squares[1] == this.player2.token && 
+            //         squares[2] == this.player2.token) {
+            //             this.player2.increaseWins()
+            //             return
+            //         }
+            // }
         }
+    
         
      
-    }
+    
 
 
 /*this game file should 
