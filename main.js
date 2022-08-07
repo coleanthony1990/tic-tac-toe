@@ -22,49 +22,24 @@ function addToken(event) {
     endTurn()
 }
 
-function increaseWins() {
-    score1.innerText = `${currentGame.player1.wins} wins`
-    score2.innerText = `${currentGame.player2.wins} wins`
-
-
-}
-function endTurn() {
-    if (currentGame.win) {
-
-        increaseWins()
-        currentGame.reset()
-
-    } else {
-        currentGame.switchTurn()
-    }
-}
-
-function addToken(event) {
-    var clickedBox = event.target;
-    if (clickedBox.innerHTML !== '') {
-        return
-    }
-
-    clickedBox.innerHTML = currentGame.currentPlayer.token
-    endTurn()
-}
 
 function increaseWins() {
     score1.innerText = `${currentGame.player1.wins} wins`
     score2.innerText = `${currentGame.player2.wins} wins`
+    this.win = false
 
 
 }
 function endTurn() {
     currentGame.checkWin()
-    console.log("endturn()")
     if (currentGame.win) {
 
         increaseWins()
         currentGame.reset()
 
+
     } else {
-        console.log("switch()")
         currentGame.switchTurn()
     }
 }
+
