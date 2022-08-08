@@ -13,6 +13,9 @@ for (var i = 0; i < tiles.length; i++) {
     tiles[i].addEventListener('click', addToken, { once: true });
 }
 grid.addEventListener('click', showWinner)
+// grid.addEventListener('click', displayDraw)
+
+
 
 function addToken(event) {
     var clickedBox = event.target;
@@ -22,6 +25,7 @@ function addToken(event) {
 
     clickedBox.innerHTML = currentGame.currentPlayer.token
     endTurn()
+    displayDraw()
 }
 
 
@@ -37,14 +41,14 @@ function showWinner() {
     var checkWinner = currentGame.checkWin()
     if (checkWinner === `Player 1 Wins`) {
         turnStatus.innerText = `${currentGame.player1.token} Wins!`
-        
-        setTimeout(resetGame, 1000)
+
+        setTimeout(resetGame, 2000)
 
     } else if (checkWinner === `Player 2 Wins`) {
         turnStatus.innerText = `${currentGame.player2.token} Wins!`
-        
-        setTimeout(resetGame, 1000)
-}
+
+        setTimeout(resetGame, 2000)
+    }
 }
 
 
@@ -55,14 +59,16 @@ function endTurn() {
         increaseWins()
 
     } else {
+        currentGame.count++
         currentGame.switchTurn()
+
     }
 }
 
 function resetClick() {
     for (var i = 0; i < tiles.length; i++) {
-        tiles[i].addEventListener('click', addToken, {once: true});
-}
+        tiles[i].addEventListener('click', addToken, { once: true });
+    }
 }
 function resetGame() {
     currentGame.reset()
@@ -70,8 +76,15 @@ function resetGame() {
 
     resetClick()
     turnStatus.innerHTML = `It's ${currentGame.player1.token} Turn!`
-  }
+}
 
+function displayDraw() {
+    if (currentGame.count === 9 && !currentGame.win) {
+        currentGame.declareDraw()
+        setTimeout(resetGame, 2000)
+        
+    }
+}
 
 
 

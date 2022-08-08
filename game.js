@@ -4,6 +4,7 @@ class Game {
         this.draw = false;
         this.player1 = new Player({ id: 1, token: '🚴' })
         this.player2 = new Player({ id: 2, token: '🍍' })
+        this.count = 0;
 
         this.winningMoves = [
             [1, 2, 3],
@@ -50,12 +51,21 @@ class Game {
         for (var i = 0; i < tiles.length; i++) {
             tiles[i].innerHTML = ''
             this.win = false
-            
-            
+            this.draw = false
+            this.player1.turn = true
+
         }
     }
+    declareDraw() {
+        var turnTitle = document.getElementById('turn')
+                this.draw = false;
+                turnTitle.innerHTML = `It's a Draw!`
+                
 
-}
+            }
+
+        }
+    
 
 
 
