@@ -5,7 +5,4 @@ class Player {
         this.wins = 0
         this.turn = false;
     }
-    increaseWins() {
-        this.wins++
-    }
 }

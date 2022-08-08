@@ -21,8 +21,13 @@ class Game {
     switchTurn() {
         if (this.currentPlayer === this.player1) {
             this.currentPlayer = this.player2
+            this.player1.turn = false;
+            this.player2.turn = true;
+            
         } else {
             this.currentPlayer = this.player1
+            this.player1.turn = true;
+            this.player2.turn = false;
         }
         var turnTitle = document.getElementById('turn')
         turnTitle.innerHTML = `It's ${this.currentPlayer.token} Turn`
@@ -32,15 +37,18 @@ class Game {
     checkWin() {
         for (var i = 0; i < this.winningMoves.length; i++) {
             var squares = this.winningMoves[i]
+            var token1 = this.player1.token
+            var token2 = this.player2.token
             var zero = document.getElementById('section-' + squares[0]).innerHTML
             var one = document.getElementById('section-' + squares[1]).innerHTML
             var two = document.getElementById('section-' + squares[2]).innerHTML
-            if (zero === this.player1.token && one === this.player1.token && two === this.player1.token) {
-                this.player1.increaseWins()
+            console.log(`player1`, this.player1)
+            if (zero === token1 && one === token1 && two === token1) {
+                this.player1.wins++
                 this.win = true;
                 return `Player 1 Wins`
-            } else if (zero === this.player2.token && one === this.player2.token && two === this.player2.token) {
-                this.player2.increaseWins()
+            } else if (zero === token2 && one === token2 && two === token2) {
+                this.player2.wins++
                 this.win = true;
                 return `Player 2 Wins`
             }
@@ -52,13 +60,14 @@ class Game {
             tiles[i].innerHTML = ''
             this.win = false
             this.draw = false
-            this.player1.turn = true
+            this.currentPlayer.turn = true
+            this.count = 0;
 
         }
     }
     declareDraw() {
         var turnTitle = document.getElementById('turn')
-                this.draw = false;
+                this.draw = true;
                 turnTitle.innerHTML = `It's a Draw!`
                 
 

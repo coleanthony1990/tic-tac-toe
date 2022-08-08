@@ -26,10 +26,12 @@ function addToken(event) {
     clickedBox.innerHTML = currentGame.currentPlayer.token
     endTurn()
     displayDraw()
+    console.log(currentGame.player1.wins)
+    console.log(currentGame.win)
 }
 
 
-function increaseWins() {
+function displayWins() {
     score1.innerText = `${currentGame.player1.wins} wins`
     score2.innerText = `${currentGame.player2.wins} wins`
 
@@ -53,14 +55,18 @@ function showWinner() {
 
 
 function endTurn() {
-    currentGame.checkWin()
+     currentGame.checkWin()
+     
     if (currentGame.win) {
 
-        increaseWins()
+        displayWins()
+        // currentGame.win = true
+        // currentGame.currentPlayer.wins++
 
     } else {
         currentGame.count++
         currentGame.switchTurn()
+        
 
     }
 }
@@ -75,7 +81,7 @@ function resetGame() {
     grid.addEventListener('click', showWinner)
 
     resetClick()
-    turnStatus.innerHTML = `It's ${currentGame.player1.token} Turn!`
+    turnStatus.innerHTML = `It's ${currentGame.currentPlayer.token} Turn!`
 }
 
 function displayDraw() {
