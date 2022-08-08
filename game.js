@@ -4,7 +4,7 @@ class Game {
         this.draw = false;
         this.player1 = new Player({ id: 1, token: '🚴' })
         this.player2 = new Player({ id: 2, token: '🍍' })
-        this.board = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
         this.winningMoves = [
             [1, 2, 3],
             [1, 5, 9],
@@ -24,44 +24,37 @@ class Game {
             this.currentPlayer = this.player1
         }
         var turnTitle = document.getElementById('turn')
-        turnTitle.innerHTML = `It's ${this.currentPlayer.token} turn`
+        turnTitle.innerHTML = `It's ${this.currentPlayer.token} Turn`
 
 
     }
     checkWin() {
         for (var i = 0; i < this.winningMoves.length; i++) {
             var squares = this.winningMoves[i]
-            if (document.getElementById('section-' + squares[0]).innerHTML === this.player1.token && document.getElementById('section-' + squares[1]).innerHTML === this.player1.token && document.getElementById('section-' + squares[2]).innerHTML === this.player1.token) {
+            var zero = document.getElementById('section-' + squares[0]).innerHTML
+            var one = document.getElementById('section-' + squares[1]).innerHTML
+            var two = document.getElementById('section-' + squares[2]).innerHTML
+            if (zero === this.player1.token && one === this.player1.token && two === this.player1.token) {
                 this.player1.increaseWins()
                 this.win = true;
-            } else if (document.getElementById('section-' + squares[0]).innerHTML === this.player2.token && document.getElementById('section-' + squares[1]).innerHTML === this.player2.token && document.getElementById('section-' + squares[2]).innerHTML === this.player2.token) {
+                return `Player 1 Wins`
+            } else if (zero === this.player2.token && one === this.player2.token && two === this.player2.token) {
                 this.player2.increaseWins()
                 this.win = true;
+                return `Player 2 Wins`
             }
         }
     }
     reset() {
-        var grid = document.querySelectorAll('.grid-section')
-        for (var i = 0; i < grid.length; i++) {
-            grid[i].innerHTML = ''
-            this.draw = false;
+        var tiles = document.querySelectorAll('.grid-section')
+        for (var i = 0; i < tiles.length; i++) {
+            tiles[i].innerHTML = ''
+            this.win = false
+            
+            
         }
     }
 
-
-    //     if (squares[0] == this.player1.token && 
-    //     squares[1] == this.player1.token && 
-    //     squares[2] == this.player1.token) {
-    //         this.player1.increaseWins()
-    //         return
-    //     }
-    //     if (squares[0] this.player2.token && 
-    //         squares[1] == this.player2.token && 
-    //         squares[2] == this.player2.token) {
-    //             this.player2.increaseWins()
-    //             return
-    //         }
-    // }
 }
 
 
