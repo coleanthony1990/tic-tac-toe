@@ -26,6 +26,7 @@ This game of tic tac toe represents two of my ([Cole Anthony](https://www.linked
 ## Playing Tic Tac Toe
 Tic Tac Toe is played with 2 players. Each one tries to connect their token to two others in a straight line horizontally, diagonally, or vertical to win the game. Their wins are logged and displayed. The winner of each game is displayed in the top of the page. Players alternate the first move each game. Players can also draw if neither are capable of matching 3 of their tokens in a straight line. The game resets when eith a player wins or a draw happens. Neither players win increases if a draw happens. Players alternate the first move each game.
 ## Screen Shots
+[screen-recorder-tue-aug-09-2022-10-39-42.webm](https://user-images.githubusercontent.com/103971359/183711160-639bad1e-500b-4773-afbe-0e1ab32816bb.webm)
 
 ## Future Additions
 
