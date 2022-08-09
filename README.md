@@ -8,7 +8,7 @@
 - [The Game](#Playing-Tic-Tac-Toe)
 - [Screen Shots](#Screen-Shots)
 - [Future Additions](#Future-Additions)
-- [Challenges](#Challenges)
+- [Reflections](#Reflections)
 - [Project Spec](#Project-Spec)
 ---
 ## Introduction
@@ -28,8 +28,9 @@ Tic Tac Toe is played with 2 players. Each one tries to connect their token to t
 ## Screen Shots
 
 ## Future Additions
-
-## Challenges
-
+I would like to add a button to clear scores as well as adding the ability to save to local storage. 
+It would also be fun to get more creative with the css.
+## Reflections
+I found that getting started with the javascript was tough. It was tough to know where to start. Once you just choose somewhere, it makes sense. Seperating the Data model from the dom is still tough but I understand it more with this project. It didn't cause me as much trouble getting the data model to update with the dom for this project. Some functions came fairly easy to me and others were really tough to figure out. It was a little hard to organize where functions were being called. It can get confusing if don't work hard to keep it simple.
 ## Project Spec
 The project spec and rubric is linked [here](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo-v2.html).
