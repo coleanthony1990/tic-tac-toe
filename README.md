@@ -3,7 +3,7 @@
 ## Table of Contents
 ---
 - [Introduction](#Introduction)
-- [Thanks](#Thanks and Resources)
+- [Thanks](#Thanks-and-Resources)
 - [Technologies](#Technologies)
 - [The Game](#Playing-Tic-Tac-Toe)
 - [Screen Shots](#Screen-Shots)
