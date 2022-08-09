@@ -3,7 +3,7 @@
 ## Table of Contents
 ---
 - [Introduction](#Introduction)
-- [Thanks](#Thanks:)
+- [Thanks](#Thanks and Resources)
 - [Technologies](#Technologies)
 - [The Game](#Playing-Tic-Tac-Toe)
 - [Screen Shots](#Screen-Shots)
@@ -15,7 +15,7 @@
 
 This game of tic tac toe represents two of my ([Cole Anthony](https://www.linkedin.com/in/cole-edwin-anthony/)) favorite things, Cycling & Pineapple. 
 
-## Thanks and Resources:
+## Thanks and Resources
 - I just want to say thanks to my fellow cohort memebers, my mentor, Bailey Dunning and my mod 2 rock, Cole Stephenson for helping me ask the right questions.
 - Resources include [MDN](https://developer.mozilla.org/en-US/) and [Stack Overflow](https://stackoverflow.com/).
 
