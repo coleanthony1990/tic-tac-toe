@@ -76,6 +76,7 @@ html, body , .container {
     border-collapse: collapse;
     font-size: 5vw;
     text-shadow: 2px 2px 4px grey;
+    cursor: pointer;
 }
 
 #section-1, #section-2, #section-3 {
