@@ -75,7 +75,8 @@ function resetGame() {
     grid.addEventListener('click', showWinner)
 
     resetClick()
-    turnStatus.innerHTML = `It's ${currentGame.player1.token} Turn!`
+    changePlayer()
+    turnStatus.innerHTML = `It's ${currentGame.currentPlayer.token} Turn!`
 }
 
 function displayDraw() {
@@ -85,6 +86,14 @@ function displayDraw() {
         
     }
 }
+function changePlayer() {
+    if (currentGame.gameCount % 2 === 0) {
+        currentGame.currentPlayer = currentGame.player2
+    } else {
+        currentGame.currentPlayer = currentGame.player1
+    }
+}
 
-
+//if last game started with 1, reset game2 current player to 2, and so on
+//
 
