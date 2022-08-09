@@ -21,7 +21,6 @@ function addToken(event) {
     clickedBox.innerHTML = currentGame.currentPlayer.token
     endTurn()
     displayDraw()
-    console.log('wins', currentGame.player1.wins)
     return 
 }
 
