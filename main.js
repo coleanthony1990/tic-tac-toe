@@ -21,34 +21,36 @@ function addToken(event) {
     clickedBox.innerHTML = currentGame.currentPlayer.token
     endTurn()
     displayDraw()
+    console.log('wins', currentGame.player1.wins)
+    return 
 }
 
-function increaseWins() {
+function showWins() {
     score1.innerText = `${currentGame.player1.wins} wins`
     score2.innerText = `${currentGame.player2.wins} wins`
     currentGame.win = false
 }
 
 function showWinner() {
-    var checkWinner = currentGame.checkWin()
-    if (checkWinner === `Player 1 Wins`) {
+    if (currentGame.winner === currentGame.player1.token) {
         turnStatus.innerText = `${currentGame.player1.token} Wins!`
         setTimeout(resetGame, 2000)
-    } else if (checkWinner === `Player 2 Wins`) {
+    } else if (currentGame.winner === currentGame.player2.token) {
         turnStatus.innerText = `${currentGame.player2.token} Wins!`
         setTimeout(resetGame, 2000)
     }
 }
 
 function endTurn() {
-    currentGame.checkWin()
+   currentGame.checkWin()
     if (currentGame.win) {
-        increaseWins()
+        showWins()
     } else {
         currentGame.count++
         currentGame.switchTurn()
     }
 }
+
 
 function resetClick() {
     for (var i = 0; i < tiles.length; i++) {
