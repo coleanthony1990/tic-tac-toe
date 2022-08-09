@@ -75,7 +75,7 @@ function resetGame() {
     grid.addEventListener('click', showWinner)
 
     resetClick()
-    turnStatus.innerHTML = `It's ${currentGame.player1.token} Turn!`
+    turnStatus.innerHTML = `It's ${currentGame.currentPlayer.token} Turn!`
 }
 
 function displayDraw() {

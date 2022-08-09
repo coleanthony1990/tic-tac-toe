@@ -52,7 +52,8 @@ class Game {
             tiles[i].innerHTML = ''
             this.win = false
             this.draw = false
-            this.player1.turn = true
+            this.currentPlayer.turn = true
+            this.count = 0
 
         }
     }
