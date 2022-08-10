@@ -13,7 +13,7 @@
 ---
 ## Introduction
 
-This game of tic tac toe represents two of my ([Cole Anthony](https://www.linkedin.com/in/cole-edwin-anthony/)) favorite things, Cycling & Pineapple. 
+This game of tic tac toe represents two of my ([Cole Anthony](https://www.linkedin.com/in/cole-edwin-anthony/)) favorite things, Cycling & Pineapple. The game can be played [here](https://coleanthony1990.github.io/tic-tac-toe/)
 
 ## Thanks and Resources
 - I just want to say thanks to my fellow cohort memebers, my mentor, Bailey Dunning and my mod 2 rock, Cole Stephenson for helping me ask the right questions.
